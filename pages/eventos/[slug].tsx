@@ -35,7 +35,7 @@ const postPage: NextPage<postPage> = ({ post }) => {
   };
 
   return (
-    <Layout title="slug">
+    <Layout title={post?.slug}>
       <div
         style={{
           backgroundImage: `url(${post.image})`,

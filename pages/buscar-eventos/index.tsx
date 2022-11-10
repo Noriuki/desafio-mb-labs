@@ -28,7 +28,7 @@ const BuscarEventos: NextPage = (props) => {
   }, []);
 
   return (
-    <Layout title="buscar eventos">
+    <Layout title="buscar-eventos">
       {!!postList?.length ? (
         <PostGrid postList={postList} />
       ) : (
