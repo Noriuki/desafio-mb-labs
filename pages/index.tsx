@@ -71,8 +71,11 @@ const Home: NextPage<homePage> = ({ carouselPosts, postList }) => {
 
 export default Home;
 
-export async function getServerSideProps() {
-  const apiUrl = "http://localhost:3000/api";
+export async function getServerSideProps(context: any) {
+  const apiUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://${context.req.rawHeaders[1]}/api`
+      : "http://localhost:3000/api";
   const res = await fetch(`${apiUrl}/eventos`);
   const { eventos } = await res.json();
 

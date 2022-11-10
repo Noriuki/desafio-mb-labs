@@ -156,8 +156,12 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
 };
 export default PostPage;
 
-export async function getServerSideProps({ params }: any) {
-  const apiUrl = "http://localhost:3000/api";
+export async function getServerSideProps(context: any) {
+  const apiUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://${context.req.rawHeaders[1]}/api`
+      : "http://localhost:3000/api";
+  const { params } = context;
   const res = await fetch(`${apiUrl}/eventos/${params.slug}`);
   const post = await res.json();
 
