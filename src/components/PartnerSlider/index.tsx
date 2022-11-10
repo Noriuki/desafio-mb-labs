@@ -23,7 +23,7 @@ const PartnerSlider: React.FC<IPartnerSlider> = ({ partnerList }) => {
     <Slider {...settings}>
       {!!partnerList?.length &&
         partnerList.map((partner) => (
-          <div className={styles.sliderItem}>
+          <div className={styles.sliderItem} key={partner.name}>
             <img src={partner.image} alt={partner.name} />
           </div>
         ))}

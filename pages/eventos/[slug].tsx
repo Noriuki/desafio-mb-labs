@@ -7,11 +7,11 @@ import { useSetRecoilState } from "recoil";
 import Layout from "../../src/components/Layout";
 import { IPost } from "../../src/components/types/interfaces";
 import { shopCart } from "../../src/state/atom";
-type postPage = {
+type IPostPage = {
   post: IPost;
 };
 
-const postPage: NextPage<postPage> = ({ post }) => {
+const PostPage: NextPage<IPostPage> = ({ post }) => {
   const [quantity, setQuantity] = useState(1);
   const setShopCart = useSetRecoilState(shopCart);
 
@@ -154,7 +154,7 @@ const postPage: NextPage<postPage> = ({ post }) => {
     </Layout>
   );
 };
-export default postPage;
+export default PostPage;
 
 export async function getServerSideProps({ params }: any) {
   const apiUrl = "http://localhost:3000/api";
