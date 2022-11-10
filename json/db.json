@@ -1,0 +1,94 @@
+{
+  "eventos": [
+    {
+      "slug": "cubo-2022",
+      "image": "/images/eventos/eventos-cubo.png",
+      "date": "9 De Novembro - 08:00 / 12 De Novembro - 19:00",
+      "title": "CUBO 2022 – 46ª Edição",
+      "description": "VENDAS DOS DIAS AVULSOS DA PROGRAMAÇÃO DO RÉVEILLON VIRA JERI 2023",
+      "place": "Faculdade de Odontologia – USP Av. Prof. Lineu Prestes, 2227 São Paulo - SP",
+      "price": 50.0,
+      "host": "USP"
+    },
+    {
+      "slug": "tusca-41",
+      "image": "/images/eventos/eventos-tusca.png",
+      "date": "12 De Novembro até  15 De Novembro",
+      "title": "Tusca - 41ª Edição",
+      "description": "12, 13, 14 e 15 de novembro, na Arena Tusca, é o momento para tuscar forte e tirar todo o atraso que tá na conta! Sua única preocupação será decidir para qual atlética torcer e como encontrar seus amigos no meio de um mar de tusqueiras e tusqueiros do Brasil inteiro. Serão 4 dias de competição e +3 mil atletas em 27 modalidades esportivas. As atléticas anfitriãs e criadoras da Tusca, CAASO e UFSCAR, junto das atléticas convidadas, LEU Unicamp, POLI-USP (AAAP), Jacaré FGV e LAURP USP, disputarão entre si pela 41ª Taça Universitária de São Carlos.",
+      "place": "Av. Faber - Jardim Nova Sao Carlos, São Carlos - SP",
+      "price": 105.0,
+      "host": "UFSCAR"
+    },
+    {
+      "slug": "epic-25",
+      "image": "/images/eventos/eventos-epic.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "25° Encontro de Pesquisadores e de Iniciação Científica - EPIC",
+      "description": "Apresentamos a 25ª Edição do Encontro de Pesquisadores e de Iniciação Científica - EPIC. O evento de 2022, tendo como temática 'O impacto da pesquisa no pós pandemia', tem por objetivo apresentar os trabalhos realizados pelos estudantes de Graduação e Pós-Graduação, sendo um importante fórum para a difusão dos avanços da ciência universitária, debates sobre temas envolvendo a comunidade em que se insere. O evento ocorrerá, de maneira online, nos dias 05, 06 e 07 de dezembro de 2022.",
+      "place": " Este é um evento online",
+      "price": 0.0,
+      "host": "UNISO"
+    },
+    {
+      "slug": "evento-uniso",
+      "image": "/images/eventos/eventos-uniso.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 25.0,
+      "host": "UNISO"
+    },
+    {
+      "slug": "evento-usp",
+      "image": "/images/eventos/eventos-usp.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 25.0,
+      "host": "USP"
+    },
+    {
+      "slug": "evento-ibm",
+      "image": "/images/eventos/eventos-ibm.png",
+      "date": " 08/12/2022 – 10/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 15.0,
+      "host": "IBM"
+    },
+    {
+      "slug": "evento-unip",
+      "image": "/images/eventos/eventos-unip.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 5.0,
+      "host": "UNIP"
+    },
+    {
+      "slug": "evento-google",
+      "image": "/images/eventos/eventos-google.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 25.0,
+      "host": "GOOGLE"
+    },
+    {
+      "slug": "evento-ufscar",
+      "image": "/images/eventos/eventos-ufscar.png",
+      "date": " 05/12/2022 – 07/12/2022",
+      "title": "sit amet consectetur adipisicing",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, voluptatum repellat a dolorem maiores optio. ",
+      "place": " Este é um evento online",
+      "price": 25.0,
+      "host": "UFSCAR"
+    }
+  ]
+}

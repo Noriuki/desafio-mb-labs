@@ -1,0 +1,37 @@
+.carousel {
+  margin: 1rem 0rem 2rem 0rem;
+}
+.carousel img {
+  height: 400px!important;
+}
+
+.listItem .MuiImageListItem-imgFullWidth {
+  top: 0;
+  width: 0;
+  position: unset;
+  transform: unset;
+}
+
+.rootItem {
+  width: auto !important;
+  margin-right: 3px;
+  height: 174px
+}
+
+.title {
+  font-weight:  700;
+  font-size: 1rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.titleBar {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 0px 0px 5px 5px;
+}

@@ -1,0 +1,30 @@
+.header{
+  padding: var(--container-padding);
+  background-color: white;
+  color: var(--default-white);
+  min-height: 80px;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.header, .headerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; 
+}
+
+.searchBar {
+  width: 450px; 
+}
+
+.shopCartIcon, .userIcon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.logo, .searchBar, .cartCounter {
+  margin: 0 1.5rem;
+}

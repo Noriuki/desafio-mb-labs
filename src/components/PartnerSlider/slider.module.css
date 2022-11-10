@@ -1,0 +1,22 @@
+.slider {
+  
+}
+.sliderItem {
+  height: 250px!important;
+  width: 380px!important; 
+  border-radius: 10px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.sliderItem img {
+  width: 150px;
+  height: 60px;
+}
+
+.slider .slick-slide, .slider .slick-slide > div {
+  height: 300px!important;
+  width: 380px!important; 
+  display: flex;
+  align-items: center;
+}
