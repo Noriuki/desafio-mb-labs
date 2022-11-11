@@ -1,5 +1,5 @@
 .slider {
-  
+  background-color: var(--default-white);
 }
 .sliderItem {
   height: 250px!important;
@@ -11,7 +11,6 @@
 }
 .sliderItem img {
   width: 150px;
-  height: 60px;
 }
 
 .slider .slick-slide, .slider .slick-slide > div {

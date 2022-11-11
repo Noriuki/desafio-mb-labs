@@ -13,15 +13,34 @@
   cursor: pointer;
 }
 .postCardContent h5{
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   text-align: justify;
 }
-.postCardContent p{
-  font-size: 1rem;
+
+.postCardContentDate {
   text-align: justify;
+  color: #46237A;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  justify-content: space-between;
 }
-.postCardContent span{
-  font-size: 1rem;
+
+.postCardContentDate p{
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.postCardContentLocal {
+  display: flex; 
+  margin: 0 auto;
   text-align: justify;
-  color: var(--primary-color);
+  align-items: center;
+  font-size: 0.6rem;
+}
+.postCardContentDescription {
+  padding: 1rem 0 !important;
+  font-size: 0.9rem;
 }

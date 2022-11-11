@@ -1,4 +1,6 @@
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import PlaceIcon from "@mui/icons-material/Place";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { Button, IconButton, Typography } from "@mui/material";
 import { NextPage } from "next";
@@ -7,6 +9,7 @@ import { useSetRecoilState } from "recoil";
 import Layout from "../../src/components/Layout";
 import { IPost } from "../../src/components/types/interfaces";
 import { shopCart } from "../../src/state/atom";
+
 type IPostPage = {
   post: IPost;
 };
@@ -64,31 +67,62 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
             zIndex: 1,
             top: "0px",
             left: "0px",
-            width: "100%",
+            width: "80%",
             height: "450px",
             marginBottom: "2rem",
-            boxShadow: "0 10px 31px 0 rgb(0 0 0 / 30%)",
           }}
         >
-          <img alt={post.title} src={post.image} width="100%" height="450px" />
+          <img alt={post.title} src={post.image} width="100%" height="100%" />
         </div>
         <Typography gutterBottom variant="h5" style={{ fontSize: "2rem" }}>
           {post.title}
         </Typography>
-        <span>{post.date}</span>
-        <div style={{ display: "flex", padding: "2rem 0", width: "100%" }}>
-          <Typography
-            variant="body2"
-            color="text.secondary"
+        <p style={{ display: "flex", alignItems: "center" }}>
+          <DateRangeIcon style={{ marginRight: "5px" }} />
+          {post.date}
+        </p>
+        <div
+          style={{
+            display: "flex",
+            padding: "2rem 0",
+            width: "100%",
+          }}
+        >
+          <div
             style={{
+              display: "flex",
+              flexDirection: "column",
               padding: "0 1rem",
               width: "70%",
-              fontSize: "1.2rem",
-              textAlign: "justify",
             }}
           >
-            {post.description}
-          </Typography>
+            <Typography
+              variant="h6"
+              color="text.secondary"
+              style={{
+                fontSize: "1.2rem",
+                textAlign: "justify",
+                color: "var(--primary-color)",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <PlaceIcon style={{ marginRight: "5px", color: "red" }} />{" "}
+              {post.place}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              style={{
+                paddingTop: "1rem",
+                width: "100%",
+                fontSize: "1.2rem",
+                textAlign: "justify",
+              }}
+            >
+              {post.description}
+            </Typography>
+          </div>
           <div
             style={{
               display: "flex",

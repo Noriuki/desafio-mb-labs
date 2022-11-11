@@ -13,7 +13,7 @@ const Layout: React.FC<IProps> = (props) => {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>Mais Ingressos - {props.title}</title>
+        <title>Mais Ingressos {props?.title && `- ${props.title}`}</title>
         <meta
           name="description"
           content="Site de compra e venda de ingressos para universidades e empresas"

@@ -20,7 +20,7 @@ const PartnerSlider: React.FC<IPartnerSlider> = ({ partnerList }) => {
     swipeToSlide: true,
   };
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className={styles.slider}>
       {!!partnerList?.length &&
         partnerList.map((partner) => (
           <div className={styles.sliderItem} key={partner.name}>

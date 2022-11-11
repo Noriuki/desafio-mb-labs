@@ -25,6 +25,6 @@
   color: var(--primary-color);
 }
 
-.logo, .searchBar, .cartCounter {
+.logo, .searchBar, .shopCartIcon, .userIcon {
   margin: 0 1.5rem;
 }
