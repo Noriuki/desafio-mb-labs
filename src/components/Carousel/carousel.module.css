@@ -35,3 +35,9 @@
   backdrop-filter: blur(4px);
   border-radius: 0px 0px 5px 5px;
 }
+
+@media screen and (max-width: 750px){
+  .carousel {
+    display: none;
+  }
+}

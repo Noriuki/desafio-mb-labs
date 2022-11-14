@@ -15,10 +15,12 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
+  flex-wrap: wrap;
 }
 .footerNaveCol {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .footerNaveCol a {
   margin: 10px 0;
@@ -39,4 +41,11 @@
 .footerSocialMediaLinks > *{
 font-size: 2rem;
 margin: 0 15px;
+}
+
+@media (max-width: 750px)
+{
+  .footer{
+    padding: 1rem;
+  }
 }

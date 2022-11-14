@@ -3,15 +3,18 @@
   background-color: white;
   color: var(--default-white);
   min-height: 80px;
-  justify-content: space-between;
+
   margin-bottom: 2rem;
   box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-.header, .headerContainer {
+.header, .headerContainer, .menuContainer {
   display: flex;
+  width: 100%;
   align-items: center;
 }
-
+nav.headerContainer {
+  justify-content: end;
+}
 .logo {
   width: 150px; 
 }
@@ -20,11 +23,29 @@
   width: 450px; 
 }
 
-.shopCartIcon, .userIcon {
+.shopCartIcon, .userIcon, .menuIcon, .closeButtonIcon {
   font-size: 2rem;
   color: var(--primary-color);
 }
 
-.logo, .searchBar, .cartCounter, .userIcon {
+.logo, .searchBar, .cartCounter, .userIcon, .menuIcon {
   margin: 0 1.5rem;
+}
+.menuIcon{
+  margin-left: auto;
+}
+
+.mobileMenu{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.closeButton {
+  margin-right: auto;
+}
+
+.mobileMenu a {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: var(--primary-color);
 }

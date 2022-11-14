@@ -1,0 +1,66 @@
+.imageContainer {
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-height: 150px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.imageBlur {
+  filter: blur(8px);
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+  min-height: 150px;
+  height: 100%;
+  width: 100%;
+}
+
+.postImage {
+  display: flex; margin: auto; 
+  border-radius: 5px;
+  width: 70%;
+  height: auto;
+}
+.contentContainer {
+  display: flex;
+  padding: 2rem 0;
+  width: 100%;
+}
+.descriptionContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  width: 70%;
+}
+.buyTicket {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--primary-color);
+  padding: 0 2rem;
+  flex: 1;
+}
+@media (max-width: 750px)
+{
+  .imageBlur {
+    display: none;
+  }
+  .imageContainer, .postImage {
+    width: 100%;
+    height: auto;
+  }
+  .contentContainer{
+    flex-direction: column;
+  }
+  .descriptionContent{
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .buyTicket {
+    border: none;
+  }
+}
+

@@ -10,6 +10,7 @@ import Layout from "../../src/components/Layout";
 import PartnerSlider from "../../src/components/PartnerSlider";
 import { IPost } from "../../src/components/types/interfaces";
 import { partnerList, shopCart } from "../../src/state/atom";
+import styles from "./eventos.module.css";
 
 type IPostPage = {
   post: IPost;
@@ -49,35 +50,12 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-            top: "0px",
-            left: "0px",
-            width: "100%",
-            height: "450px",
-            marginBottom: "2rem",
-          }}
-        >
+        <div className={styles.imageContainer}>
           <div
-            style={{
-              backgroundImage: `url(${post.image})`,
-              filter: "blur(8px)",
-              position: "absolute",
-              backgroundSize: "cover",
-              zIndex: -1,
-              width: "100%",
-              height: "450px",
-            }}
+            className={styles.imageBlur}
+            style={{ backgroundImage: `url(${post.image}` }}
           ></div>
-          <img
-            alt={post.title}
-            src={post.image}
-            width="70%"
-            height="450px"
-            style={{ display: "flex", margin: "auto", borderRadius: "5px" }}
-          />
+          <img alt={post.title} src={post.image} className={styles.postImage} />
         </div>
         <Typography gutterBottom variant="h5" style={{ fontSize: "2rem" }}>
           {post.title}
@@ -86,21 +64,8 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
           <DateRangeIcon style={{ marginRight: "5px" }} />
           {post.date}
         </p>
-        <div
-          style={{
-            display: "flex",
-            padding: "2rem 0",
-            width: "100%",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "0 1rem",
-              width: "70%",
-            }}
-          >
+        <div className={styles.contentContainer}>
+          <div className={styles.descriptionContent}>
             <Typography
               variant="h6"
               color="text.secondary"
@@ -128,15 +93,7 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
               {post.description}
             </Typography>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              borderLeft: "1px solid var(--primary-color)",
-              padding: "0 2rem",
-              flex: 1,
-            }}
-          >
+          <div className={styles.buyTicket}>
             <div
               style={{
                 display: "flex",
