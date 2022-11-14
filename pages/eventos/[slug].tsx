@@ -5,10 +5,11 @@ import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { Button, IconButton, Typography } from "@mui/material";
 import { NextPage } from "next";
 import { useState } from "react";
-import { useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import Layout from "../../src/components/Layout";
+import PartnerSlider from "../../src/components/PartnerSlider";
 import { IPost } from "../../src/components/types/interfaces";
-import { shopCart } from "../../src/state/atom";
+import { partnerList, shopCart } from "../../src/state/atom";
 
 type IPostPage = {
   post: IPost;
@@ -17,7 +18,7 @@ type IPostPage = {
 const PostPage: NextPage<IPostPage> = ({ post }) => {
   const [quantity, setQuantity] = useState(1);
   const setShopCart = useSetRecoilState(shopCart);
-
+  const partnerListValue = useRecoilValue(partnerList);
   const handleQuantity = (type: string) => {
     let newQuantity = quantity;
     if (type === "ADD") {
@@ -75,7 +76,7 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
             src={post.image}
             width="70%"
             height="450px"
-            style={{ display: "flex", margin: "auto" }}
+            style={{ display: "flex", margin: "auto", borderRadius: "5px" }}
           />
         </div>
         <Typography gutterBottom variant="h5" style={{ fontSize: "2rem" }}>
@@ -187,6 +188,9 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
               Comprar Ingresso
             </Button>
           </div>
+        </div>
+        <div style={{ width: "100%", margin: "2rem auto" }}>
+          <PartnerSlider partnerList={partnerListValue} />
         </div>
       </div>
     </Layout>

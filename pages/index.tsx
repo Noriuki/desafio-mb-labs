@@ -1,13 +1,13 @@
 import Button from "@mui/material/Button/Button";
 import { NextPage } from "next";
 import { useEffect } from "react";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import PostCarousel from "../src/components/Carousel";
 import Layout from "../src/components/Layout";
 import PartnerSlider from "../src/components/PartnerSlider";
 import PostGrid from "../src/components/PostGrid";
 import { IPost } from "../src/components/types/interfaces";
-import { postFilter, postListGlobal } from "../src/state/atom";
+import { partnerList, postFilter, postListGlobal } from "../src/state/atom";
 import styles from "../src/styles/pages/home.module.css";
 
 type homePage = {
@@ -15,18 +15,10 @@ type homePage = {
   postList: IPost[];
 };
 
-const partnerList = [
-  { name: "UNISO", image: "/images/parceiros/parceiros-uniso.png" },
-  { name: "UNIP", image: "/images/parceiros/parceiros-unip.png" },
-  { name: "IBM", image: "/images/parceiros/parceiros-ibm.png" },
-  { name: "UFSCAR", image: "/images/parceiros/parceiros-ufscar.png" },
-  { name: "USP", image: "/images/parceiros/parceiros-usp.png" },
-  { name: "GOOGLE", image: "/images/parceiros/parceiros-google.png" },
-];
-
 const Home: NextPage<homePage> = ({ carouselPosts, postList }) => {
   const setPostListCached = useSetRecoilState(postListGlobal);
   const setPostFilter = useSetRecoilState(postFilter);
+  const partnerListValue = useRecoilValue(partnerList);
 
   useEffect(() => {
     setPostFilter("");
@@ -47,7 +39,7 @@ const Home: NextPage<homePage> = ({ carouselPosts, postList }) => {
           Empresas e Universidades parceiras
         </h3>
         <div style={{ width: "100%" }}>
-          <PartnerSlider partnerList={partnerList} />
+          <PartnerSlider partnerList={partnerListValue} />
         </div>
       </div>
 
