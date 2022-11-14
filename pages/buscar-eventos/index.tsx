@@ -25,7 +25,7 @@ const BuscarEventos: NextPage = (props) => {
 
   useLayoutEffect(() => {
     filterPosts();
-  }, []);
+  }, [postFilterValue]);
 
   return (
     <Layout title="buscar-eventos">

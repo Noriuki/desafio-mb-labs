@@ -4,7 +4,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge, IconButton, TextField } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { postFilter, shopCart } from "../../../state/atom";
 import styles from "./header.module.css";
@@ -13,9 +13,29 @@ const Header: React.FC = () => {
   const [postFilterValue, setPostFilterValue] = useRecoilState(postFilter);
   const shopCartValue = useRecoilValue(shopCart);
   const router = useRouter();
+  const [searchText, setSearchText] = useState("");
+
+  const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    if (value.length === 0) {
+      setPostFilterValue(value);
+    }
+    setSearchText(value);
+  };
 
   const handleSearch = () => {
-    if (postFilterValue?.length > 0) router.push("/buscar-eventos");
+    if (searchText?.length > 0) {
+      setPostFilterValue(searchText);
+      router.push("/buscar-eventos");
+    }
+  };
+
+  useEffect(() => {
+    handleTextLoad();
+  }, []);
+
+  const handleTextLoad = () => {
+    if (searchText !== postFilterValue) setSearchText(postFilterValue);
   };
 
   return (
@@ -27,8 +47,8 @@ const Header: React.FC = () => {
         <TextField
           size="small"
           className={styles.searchBar}
-          value={postFilterValue}
-          onChange={(e: any) => setPostFilterValue(e.target.value)}
+          value={searchText}
+          onChange={handleText}
           InputProps={{
             endAdornment: (
               <IconButton

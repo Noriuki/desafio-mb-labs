@@ -41,19 +41,6 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
     <Layout title={post?.slug}>
       <div
         style={{
-          backgroundImage: `url(${post.image})`,
-          filter: "blur(8px)",
-          position: "absolute",
-          backgroundSize: "cover",
-          zIndex: -1,
-          top: "0px",
-          left: "0px",
-          width: "100%",
-          height: "450px",
-        }}
-      ></div>
-      <div
-        style={{
           minHeight: "100vh",
           padding: "2rem 0",
           display: "flex",
@@ -67,12 +54,29 @@ const PostPage: NextPage<IPostPage> = ({ post }) => {
             zIndex: 1,
             top: "0px",
             left: "0px",
-            width: "80%",
+            width: "100%",
             height: "450px",
             marginBottom: "2rem",
           }}
         >
-          <img alt={post.title} src={post.image} width="100%" height="100%" />
+          <div
+            style={{
+              backgroundImage: `url(${post.image})`,
+              filter: "blur(8px)",
+              position: "absolute",
+              backgroundSize: "cover",
+              zIndex: -1,
+              width: "100%",
+              height: "450px",
+            }}
+          ></div>
+          <img
+            alt={post.title}
+            src={post.image}
+            width="70%"
+            height="450px"
+            style={{ display: "flex", margin: "auto" }}
+          />
         </div>
         <Typography gutterBottom variant="h5" style={{ fontSize: "2rem" }}>
           {post.title}

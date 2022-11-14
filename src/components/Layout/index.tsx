@@ -10,10 +10,11 @@ interface IProps {
 }
 
 const Layout: React.FC<IProps> = (props) => {
+  const title = props?.title && `- ${props.title}`;
   return (
     <div className={styles.layout}>
       <Head>
-        <title>Mais Ingressos {props?.title && `- ${props.title}`}</title>
+        <title>{`Mais Ingressos ${title}`}</title>
         <meta
           name="description"
           content="Site de compra e venda de ingressos para universidades e empresas"
